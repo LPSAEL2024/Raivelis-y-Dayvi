@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    
+    <div class="parte1">
+        <img class="rd" src="RD.png" alt="">
+    </div>
+    <div class="parte2">
+        <img class="foto2" src="texto2.png" alt="">
+
+        <div class="container">
+             
+                <div class="countdow">
+                    <div>
+                        <span id="dias">320</span>
+                        <p>dias</p>
+                    </div>
+        
+                    <div>
+                        <span id="horas">24</span>
+                        <p>Horas</p>
+                    </div>
+        
+                    <div>
+                        <span id="minutos">20</span>
+                        <p>minutos</p>
+                    </div>
+        
+                    <div>
+                        <span id="segundos">50</span>
+                        <p>Segundos</p>
+                    </div>
+                </div>
+        </div>
+
+        <a target="_blank" href="https://www.google.com/maps/place/Parroquia+Santuario+del+Se%C3%B1or+de+los+Milagros,+Miguel+Grau+353,+Huaral+15201/@-11.4910211,-77.2084849,17z/data=!3m1!4b1!4m6!3m5!1s0x91068a0d55eed8a7:0xfb507d850a2ce54f!8m2!3d-11.4910165!4d-77.2059118!16s%2Fg%2F11b8tdt2l5?entry=ttu&g_ep=EgoyMDI1MDkxMC4wIKXMDSoASAFQAw%3D%3D"><img class="Parroquia" src="ubicacion1.png" alt=""></a>
+
+    </div>
+
+    <div class="parte3">
+        <a target="_blank" href="https://www.google.com/maps/place/Hostal+%22Alexia%22/@-11.4909133,-77.2017458,17z/data=!3m1!4b1!4m6!3m5!1s0x91068b72168261f1:0x2e38c34b6e1c5705!8m2!3d-11.4909186!4d-77.1991709!16s%2Fg%2F11qq3t8b34?entry=ttu&g_ep=EgoyMDI1MDkxMC4wIKXMDSoASAFQAw%3D%3D"><img class="recepcion" src="ubicacion1.png" alt=""></a>
+    </div>
+
+    <script>
+        function actualizarcountdow(){
+     const fechaActual = new Date();
+     const fechaDato = new Date('2025/11/29');
+     const diferencia = fechaDato.getTime() - fechaActual.getTime();
+ 
+     const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+     const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+     const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+     const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+ 
+     document.getElementById('dias').textContent = dias;
+     document.getElementById('horas').textContent = horas;
+     document.getElementById('minutos').textContent = minutos;
+     document.getElementById('segundos').textContent = segundos;
+ 
+ }
+ 
+ setInterval(actualizarcountdow, 1000);
+ actualizarcountdow();
+ 
+ 
+     </script>
+
+    
+</body>
+</html>
